@@ -26,6 +26,24 @@ console.log(book.pages); // Output: 300
 // Add another method named `updateYear` that updates the `year` property.
 // Use `this` to access and modify the properties.
 
+let movie = {
+  title: "Dirty Dancing",
+  year: 1987,
+  watch: function() {
+    console.log(`You watched the movie ${this.title}`)
+  },
+  updateYear: function (y) {
+    this.year = y;
+  }
+}
+
+movie.watch();
+console.log(movie);
+movie.updateYear(1987);
+console.log(movie);
+
+
+
 
 // Example 2: Adding Methods to a Pet Object
 const pet = {
@@ -50,6 +68,18 @@ console.log(pet.name);  // Output: Paws
 // Add a method named `addPopulation` that increases the `population` property by a given number.
 // Add another method named `rename` that updates the `name` property using `this`.
 
+let city = {
+  name: "Orlando",
+  pop: 307573,
+  addPop: function() {
+    this.pop += 500;
+  },
+
+}
+city.status();
+city.addPop();
+city.status();
+
 
 // Example 3: Adding Methods to a Car Object
 const car = {
@@ -73,7 +103,18 @@ console.log(car.year); // Output: 2023
 // Add a method named `upgradeRAM` that updates the `ram` property.
 // Add another method named `describe` that logs a message with the `brand`, `processor`, and `ram` properties.
 
-
+  
+let computer = {
+  brand: "Dell",
+  processor: "Intel i7",
+  ram: 16,
+upgradeRam: function(newRAM) {
+    this.ram = newRAM;
+},
+describe: function() {
+  console.log(`This computer is a ${this.brand} with a ${this.processor} processor and ${this.ram}GB of RAM.`);
+}
+}
  // Example 4: Adding Methods to a Product Object
 const product = {
   name: 'Laptop',
@@ -98,6 +139,17 @@ console.log(product.inStock); // Output: false
 // Add a method named `changeRating` that updates the `rating` property.
 // Add another method named `reopen` that sets the `inStock` property to true.
 
+let restaurant = {
+  name: "Gravy Train",
+  rating: 4.5,
+  inStock: false,
+  changeRating(newRating) {
+    this.rating = newRating;
+  },
+  reopen() {
+    this.inStock = true;
+  }
+};
 
 // Example 5: Adding Methods to a Student Object
 const student = {
@@ -121,3 +173,13 @@ console.log(student.fullName()); // Output: John Doe
 // Add a method named `renovate` that increases the `size` property by a given number.
 // Add another method named `changeAddress` that updates the `address` property.
 
+let house = {
+  size: 1500, 
+  address: "1234 Elm Street",
+  renovate(additionalSize) {
+    this.size += additionalSize;
+    changeAddress(newAddress) {
+      this.address = newAddress;
+    }
+  }
+}
