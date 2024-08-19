@@ -20,6 +20,21 @@ const songs = [];
 // 3. Title: 'Over the Rainbow', Artist: 'Judy Garland', Year: 1939
 // 4. One of your own.
 
+function createSong(title, artist, year) {
+  return {
+      title: title,
+      artist: artist,
+      year: year
+  };
+}
+
+
+songs.push(createSong('Yesterday', 'The Beatles', 1965));
+songs.push(createSong('What a Wonderful World', 'Louis Armstrong', 1967));
+songs.push(createSong('Over the Rainbow', 'Judy Garland', 1939));
+songs.push(createSong(`Hit Me Baby One More Time`, `Britney Spears`, 1998));
+console.log(songs);
+
 // Example: 
 songs.push(createSong('Yesterday', 'The Beatles', 1965));
 
@@ -32,6 +47,13 @@ console.log("\nExample 2: Accessing Objects in the Array");
 // - The title and artist of the first song
 // - The artist and year of the second song
 // - The title and year of the third song
+
+console.log(songs[0].title)
+console.log(songs[0].artist)
+console.log
+console.log("What a Wonderful World",1967);
+console.log("Over the Rainbow", "1935");
+
 
 // Example
 console.log("First song: Title = " + songs[0].title + ", Artist = " + songs[0].artist);

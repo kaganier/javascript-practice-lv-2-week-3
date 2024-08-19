@@ -19,6 +19,14 @@ console.log(defaultBook); // Output: { title: 'The Great Gatsby', author: 'F. Sc
 // - species: 'Dog'
 // - age: 2
 
+function createPet() {
+  return {
+      name: 'Chuy',
+      species: 'Dog',
+      age: 2
+  };
+}
+
 
 // Example 2: Factory Function with Default Properties
 function createCar() {
@@ -39,6 +47,13 @@ console.log(defaultCar); // Output: { brand: 'Toyota', model: 'Corolla', year: 2
 // - population: 30000
 // - country: 'USA'
 
+function createCity() {
+  return {
+      name: 'New Orleans',
+      population: 383997,
+      country: 'USA'
+  };
+}
 
 // Example 3: Factory Function with Arguments
 function createBookWithDetails(title, author, pages) {
@@ -59,6 +74,18 @@ console.log(specificBook); // Output: { title: '1984', author: 'George Orwell', 
 // - species
 // - age
 
+function createPetWithDetails(name, species, age) {
+  return {
+      name: name,
+      species: species,
+      age: age
+  };
+}
+
+let myPet1 = createPetWithDetails("Chuy", "dog", "14")
+let myPet2 = createPetWithDetails("Esther", "dog", "3")
+console.log(myPet1) 
+console.log(myPet2)
 
 // Example 4: Factory Function with Arguments
 function createCarWithDetails(brand, model, year) {
@@ -78,6 +105,14 @@ console.log(specificCar); // Output: { brand: 'Tesla', model: 'Model S', year: 2
 // - name
 // - population
 // - country
+
+function createCityWithDetails(name, population, country) {
+  return {
+      name: name,
+      population: population,
+      country: country
+  };
+}
 
 
 // Example 5: Factory Function with Method
@@ -104,3 +139,14 @@ myPet.celebrateBirthday(); // Output: Happy Birthday Bella! You are now 5 years 
 // - country
 // Add a method named `changePopulation` that takes a number as an argument and updates the `population` property.
 
+function createCityWithMethod(name, population, country) {
+  return {
+      name: name,
+      population: population,
+      country: country,
+      changePopulation: function() {
+          this.population += 100;
+          console.log(`${this.population} is the amount the city has grown`);
+      }
+  };
+}
